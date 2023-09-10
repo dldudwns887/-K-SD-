@@ -1,0 +1,44 @@
+CREATE DATABASE shush2 default CHARACTER SET UTF8; 
+
+use shush;
+
+
+
+CREATE TABLE IF NOT EXISTS A (
+    year int,
+    month int,
+    day int,
+    hour int,
+    minute int,
+    second int,
+    dB int,
+    pointA char(50),
+    PRIMARY KEY(year, month, day, hour, minute, second),
+    FOREIGN KEY (pointA) REFERENCES main (point)
+);
+
+CREATE TABLE IF NOT EXISTS B (
+    year int,
+    month int,
+    day int,
+    hour int,
+    minute int,
+    second int,
+    dB int,
+    pointB char(50),
+    PRIMARY KEY(year, month, day, hour, minute, second),
+    FOREIGN KEY (pointB) REFERENCES main (point)
+);
+
+CREATE TABLE IF NOT EXISTS C (
+    year int,
+    month int,
+    day int,
+    hour int,
+    minute int,
+    second int,
+    dB int,
+    pointC char(50),
+    PRIMARY KEY(year, month, day, hour, minute, second),
+    FOREIGN KEY (pointC) REFERENCES main (point)
+);
